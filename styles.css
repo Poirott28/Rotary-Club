@@ -362,6 +362,11 @@ footer {
     color: #000000;
 }
 
+.contact-info h2 {
+    color: #0056a6;
+    margin-bottom: 15px;
+}
+
 .map-container {
     flex-grow: 1; 
     display: flex;
