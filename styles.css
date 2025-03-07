@@ -29,14 +29,14 @@ header .logo img {
     width: 150px;
 }
 
-/* Estilos del navbar */
+
 nav {
     background-color: #347ab8;
     padding: 15px;
     position: relative;
 }
 
-/* Botón del menú (solo visible en móviles) */
+
 .menu-toggle {
     display: none;
     font-size: 24px;
@@ -46,13 +46,12 @@ nav {
     cursor: pointer;
 }
 
-/* Agregamos un ícono de menú */
+
 .menu-toggle::before {
-    content: "☰"; /* Ícono de hamburguesa */
+    content: "☰"; 
     font-size: 24px;
 }
 
-/* Lista del menú */
 nav ul {
     list-style: none;
     padding: 0;
@@ -76,7 +75,7 @@ nav ul li a:hover {
 }
 
 
-/* Estilos para móviles */
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -178,7 +177,7 @@ main {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Asegura margen en pantallas pequeñas */
+    padding: 0 20px; 
 }
 
 footer {
@@ -186,22 +185,22 @@ footer {
     padding: 50px 20px;
 }
 
-/* Contenedor flexible */
+
 .footer-rows {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px; /* Espaciado entre elementos */
+    gap: 20px; 
 }
 
-/* Columnas del footer */
+
 .footer-links {
-    flex: 1 1 250px; /* Se ajusta automáticamente con mínimo de 250px */
+    flex: 1 1 250px; 
     padding: 0 15px;
-    min-width: 200px; /* Evita que se vuelvan demasiado pequeños */
+    min-width: 200px; 
 }
 
-/* Títulos */
+
 .footer-links h4 {
     font-size: 20px;
     color: #fff;
@@ -212,7 +211,7 @@ footer {
     display: inline-block;
 }
 
-/* Enlaces */
+
 .footer-links ul {
     padding: 0;
     list-style: none;
@@ -232,11 +231,11 @@ footer {
     padding-left: 6px;
 }
 
-/* Redes sociales */
+
 .social-links {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap; /* Permite reacomodo en móviles */
+    flex-wrap: wrap; 
 }
 
 .social-links a {
@@ -256,21 +255,21 @@ footer {
     background-color: #003d7a;
 }
 
-/* Media Queries para Responsividad */
+
 @media (max-width: 768px) {
     .footer-rows {
-        flex-direction: column; /* Se apilan en columnas */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
 
     .footer-links {
-        width: 100%; /* Ocupa todo el ancho */
+        width: 100%; 
         padding: 10px 0;
     }
 
     .social-links {
-        justify-content: center; /* Centra los íconos */
+        justify-content: center; 
     }
 }
 
@@ -283,7 +282,7 @@ footer {
     align-items: center;
     padding: 40px;
     max-width: 1200px;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas */
+    flex-wrap: wrap; 
 }
 
 .texto {
@@ -315,31 +314,31 @@ footer {
     border-radius: 10px;
 }
 
-/* Media Query para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .nosotros {
-        flex-direction: column; /* Los elementos se apilan en una columna */
-        padding: 20px; /* Reducir el padding */
+        flex-direction: column; 
+        padding: 20px; 
     }
 
     .texto {
-        text-align: center; /* Centrar el texto */
-        margin-bottom: 20px; /* Espacio debajo del texto */
+        text-align: center; 
+        margin-bottom: 20px; 
     }
 
     .imagen_nosotros {
-        width: 100%; /* Hacer la imagen más ancha en pantallas pequeñas */
+        width: 100%; 
     }
 
     .texto p {
-        font-size: 16px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+        font-size: 16px; 
     }
 }
 
-/* Media Query para pantallas muy pequeñas */
+
 @media (max-width: 480px) {
     .texto p {
-        font-size: 14px; /* Reducir aún más el tamaño de la fuente */
+        font-size: 14px; 
     }
 }
 
@@ -353,24 +352,24 @@ footer {
 
 .contact-page {
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos */
-    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; 
+    align-items: center; 
     padding: 30px;
 }
 
 .contact-info {
-    max-width: 50%; /* Limita el ancho del texto */
+    max-width: 50%; 
     color: #000000;
 }
 
 .map-container {
-    flex-grow: 1; /* Hace que el mapa ocupe el espacio restante */
+    flex-grow: 1; 
     display: flex;
-    justify-content: flex-end; /* Empuja el mapa a la derecha */
+    justify-content: flex-end; 
 }
 
 .map iframe {
-    max-width: 100%; /* Ajusta el tamaño del mapa */
+    max-width: 100%; 
 }
 
 .form {
@@ -390,7 +389,7 @@ footer {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    border: 2px solid #0056b3; /* Azul oscuro */
+    border: 2px solid #0056b3; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
