@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #ffffff;
     background-color: #f9f9f9;
 }
 
@@ -69,6 +69,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
 }
+
+nav ul li a:hover {
+    color: black;
+    transition: all 0.3s ease;
+}
+
 
 /* Estilos para móviles */
 @media (max-width: 768px) {
@@ -277,11 +283,12 @@ footer {
     align-items: center;
     padding: 40px;
     max-width: 1200px;
-
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas */
 }
 
 .texto {
     flex: 1;
+    padding: 20px;
 }
 
 .texto p {
@@ -299,6 +306,7 @@ footer {
 .imagen_nosotros {
     flex: 1; 
     text-align: center; 
+    padding: 20px;
 }
 
 .imagen_nosotros img {
@@ -307,13 +315,41 @@ footer {
     border-radius: 10px;
 }
 
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nosotros {
+        flex-direction: column; /* Los elementos se apilan en una columna */
+        padding: 20px; /* Reducir el padding */
+    }
+
+    .texto {
+        text-align: center; /* Centrar el texto */
+        margin-bottom: 20px; /* Espacio debajo del texto */
+    }
+
+    .imagen_nosotros {
+        width: 100%; /* Hacer la imagen más ancha en pantallas pequeñas */
+    }
+
+    .texto p {
+        font-size: 16px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .texto p {
+        font-size: 14px; /* Reducir aún más el tamaño de la fuente */
+    }
+}
+
 /* History page */
 
 .img-mirror {
     transform: scaleX(-1);
 }
 
-/* History page */
+/* Contact page */
 
 .contact-page {
     display: flex;
