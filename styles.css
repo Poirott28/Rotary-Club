@@ -17,35 +17,85 @@ body {
 
 /* Header */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ffffff;
+    background-color: #347ab8;
     padding: 10px 20px;
-    color: #fff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
+header .logo img {
+    width: 150px;
 }
 
+/* Estilos del navbar */
+nav {
+    background-color: #347ab8;
+    padding: 15px;
+    position: relative;
+}
+
+/* Botón del menú (solo visible en móviles) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Agregamos un ícono de menú */
+.menu-toggle::before {
+    content: "☰"; /* Ícono de hamburguesa */
+    font-size: 24px;
+}
+
+/* Lista del menú */
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 20px;
 }
 
-nav a {
+nav ul li {
+    padding: 10px 15px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #000000;
-    font-weight: bold;
+    font-size: 18px;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #004e92;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
 /* Hero Section */
 
 main {
@@ -95,7 +145,7 @@ main {
 }
 
 .feature p {
-    color: #555;
+    color: #000000;
 }
 
 .feature a {
@@ -113,57 +163,62 @@ main {
 }
 
 .feature h2 a:hover {
-    color: #0056a6;
+    color: #72889c;
     padding-left: 10px;
     transition: all 0.3s ease;
 }
 
 /* Footer */
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px; /* Asegura margen en pantallas pequeñas */
 }
 
 footer {
     background-color: #0056a6;
-    height: 300px;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
+/* Contenedor flexible */
 .footer-rows {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    gap: 20px; /* Espaciado entre elementos */
 }
 
+/* Columnas del footer */
 .footer-links {
-    width: 25%;
+    flex: 1 1 250px; /* Se ajusta automáticamente con mínimo de 250px */
     padding: 0 15px;
+    min-width: 200px; /* Evita que se vuelvan demasiado pequeños */
 }
 
+/* Títulos */
 .footer-links h4 {
     font-size: 20px;
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-weight: 500;
     border-bottom: 2px solid #ffffff;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     display: inline-block;
 }
 
-.footer-links ul li a{
+/* Enlaces */
+.footer-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links ul li a {
     font-size: 18px;
     text-decoration: none;
     color: #fff;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     transition: all 0.3s ease;
-}
-
-.footer-links p{
-    color: #fff;
 }
 
 .footer-links ul li a:hover {
@@ -171,9 +226,11 @@ footer {
     padding-left: 6px;
 }
 
+/* Redes sociales */
 .social-links {
-    display: flex; 
-    gap: 10px; 
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite reacomodo en móviles */
 }
 
 .social-links a {
@@ -190,7 +247,25 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: #0056a6;
+    background-color: #003d7a;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .footer-rows {
+        flex-direction: column; /* Se apilan en columnas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 10px 0;
+    }
+
+    .social-links {
+        justify-content: center; /* Centra los íconos */
+    }
 }
 
 /* Us page */
@@ -314,21 +389,3 @@ button {
 button:hover {
     background-color: #003d80;
 }
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .feature {
-        max-width: 100%;
-    }
-
-    .historia {
-        flex-direction: column; 
-        text-align: center;
-    }
-} 
