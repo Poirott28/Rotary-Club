@@ -381,6 +381,11 @@ footer {
     margin-bottom: 10px;
 }
 
+.form-container h2 {
+    color: #0056a6;
+    margin-bottom: 15px;
+}
+
 .form-container {
     background-color: white;
     padding: 20px;
